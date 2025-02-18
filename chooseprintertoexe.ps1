@@ -1,4 +1,8 @@
-﻿Add-Type -AssemblyName System.Drawing
+﻿start-sleep -seconds 30
+
+echo N | gpupdate /force
+
+Add-Type -AssemblyName System.Drawing
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Security.Principal
 
@@ -190,6 +194,7 @@ $window.Controls.Add($okButton)
 $window.Controls.Add($cancelButton)
 $window.Controls.Add($Checkbox)
 $window.Controls.Add($chklabel)
+
 $Timer.Start()
 
 $result = $window.ShowDialog()
